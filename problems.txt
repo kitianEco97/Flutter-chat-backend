@@ -1,0 +1,8 @@
+problem:
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://git.heroku.com/flutter-socket-server-1997.git'
+
+solve:
+
+git push heroku HEAD:master
