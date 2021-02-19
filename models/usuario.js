@@ -4,7 +4,7 @@ const UsuarioSchema = Schema({
 
     nombre: {
         type: String,
-        required: true,
+        required: true
     },
     email: {
         type: String,
@@ -13,7 +13,7 @@ const UsuarioSchema = Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: true
     },
     online: {
         type: Boolean,
@@ -24,8 +24,8 @@ const UsuarioSchema = Schema({
 
 UsuarioSchema.method('toJSON', function() {
     const { __v, _id, password, ...object } = this.toObject();
-    object.uud = _id;
+    object.uid = _id;
     return object;
-});
+})
 
-module.exports = model('Usuario', UsuarioSchema);
+module.exports = model('Usuario', UsuarioSchema );

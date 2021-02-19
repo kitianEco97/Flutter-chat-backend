@@ -13,13 +13,13 @@ const router = Router();
 router.post('/new', [
     check('nombre', 'El nombre es obligatorio').not().isEmpty(),
     check('password', 'La contraseña es obligatoria').not().isEmpty(),
-    check('email', 'El correo es obligatoria').isEmail(),
+    check('email', 'El correo es obligatorio').isEmail(),
     validarCampos
 ], crearUsuario );
 
 router.post('/', [
     check('password', 'La contraseña es obligatoria').not().isEmpty(),
-    check('email', 'El correo es obligatoria').isEmail(),
+    check('email', 'El correo es obligatorio').isEmail(),
 ], login );
 
 // validarJWT
